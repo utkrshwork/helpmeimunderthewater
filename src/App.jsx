@@ -138,7 +138,7 @@ const DeepSeaApp = () => {
             updateTabData(tab.id, { formData: newFormData, hasRun: false });
           }}
           // Dark input styling: Lighter version of background, white text, subtle border
-          className="w-full px-4 py-2 bg-[#173847] border border-[#2a4e60] rounded text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 appearance-none"
+          className="w-full px-4 py-2 bg-[#334155] border border-[#2a4e60] rounded text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 appearance-none"
         >
           <option value="" className="text-gray-400">Select {fieldKey}</option>
           {DROPDOWN_OPTIONS[fieldKey].map((opt, idx) => (
@@ -202,19 +202,19 @@ const DeepSeaApp = () => {
         
         <div className="relative z-10 min-h-screen flex flex-col">
           {/* Nav: Semi-transparent version of #082029 */}
-          <nav className="bg-[#0F2B38]/80 backdrop-blur-md border-b border-[#1e4a5b]/50 shadow-lg">
+          <nav className="bg-[#1e293b]/80 backdrop-blur-md border-b border-[#1e4a5b]/50 shadow-lg">
             <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
               <div className="flex items-center gap-6">
                 <div className="h-12 w-auto flex items-center"><AppLogo className="h-12" /></div>
                 <h1 className="text-xl font-bold text-white">Application U</h1>
               </div>
               <div className="relative">
-                <button onClick={() => setShowUserDropdown(!showUserDropdown)} className="w-10 h-10 bg-[#173847]/80 rounded border border-[#2a4e60] flex items-center justify-center hover:bg-[#1f4a5e] transition-colors">
+                <button onClick={() => setShowUserDropdown(!showUserDropdown)} className="w-10 h-10 bg-[#334155]/80 rounded border border-[#2a4e60] flex items-center justify-center hover:bg-[#1f4a5e] transition-colors">
                   <User className="text-gray-300" size={20} />
                 </button>
                 {showUserDropdown && (
-                  <div className="absolute right-0 mt-2 w-48 bg-[#0F2B38] rounded-lg shadow-xl border border-[#2a4e60] overflow-hidden z-50">
-                    <button onClick={handleLogout} className="w-full px-4 py-3 text-left hover:bg-[#173847] flex items-center gap-2 text-gray-300 font-medium">
+                  <div className="absolute right-0 mt-2 w-48 bg-[#1e293b] rounded-lg shadow-xl border border-[#2a4e60] overflow-hidden z-50">
+                    <button onClick={handleLogout} className="w-full px-4 py-3 text-left hover:bg-[#334155] flex items-center gap-2 text-gray-300 font-medium">
                       <LogOut size={16} /> Logout
                     </button>
                   </div>
@@ -227,7 +227,7 @@ const DeepSeaApp = () => {
             <div className="w-full max-w-5xl">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                 {modules.map((module) => (
-                  <button key={module.id} onClick={() => handleModuleClick(module)} className="bg-[#0F2B38]/90 backdrop-blur-sm rounded-xl p-8 border border-[#2a4e60] shadow-lg hover:shadow-cyan-900/50 hover:border-cyan-700 hover:scale-105 hover:bg-[#173847] transition-all group flex flex-col items-center gap-4">
+                  <button key={module.id} onClick={() => handleModuleClick(module)} className="bg-[#1e293b]/90 backdrop-blur-sm rounded-xl p-8 border border-[#2a4e60] shadow-lg hover:shadow-cyan-900/50 hover:border-cyan-700 hover:scale-105 hover:bg-[#334155] transition-all group flex flex-col items-center gap-4">
                     <img src={module.image} alt={module.name} className="w-16 h-16 object-contain group-hover:scale-110 transition-transform" onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/64x64/png?text=MOD"; }} />
                     <h3 className="text-white font-bold text-lg tracking-wide group-hover:text-cyan-400 transition-colors">{module.name}</h3>
                   </button>
@@ -254,19 +254,19 @@ const DeepSeaApp = () => {
 
         {/* Relative z-10 ensures content sits ON TOP of the video */}
         <div className="relative z-10 flex flex-col min-h-screen">
-            <nav className="bg-[#0F2B38]/80 backdrop-blur-md border-b border-[#1e4a5b]/50 shadow-lg flex-shrink-0 z-20 relative">
+            <nav className="bg-[#1e293b]/80 backdrop-blur-md border-b border-[#1e4a5b]/50 shadow-lg flex-shrink-0 z-20 relative">
               <div className="px-6 py-3 flex items-center justify-between">
                 <div className="flex items-center gap-6">
                   <div className="h-12 w-auto flex items-center"><AppLogo className="h-12" /></div>
                   <h1 className="text-xl font-bold text-white">Application U</h1>
                 </div>
                 <div className="relative">
-                  <button onClick={() => setShowUserDropdown(!showUserDropdown)} className="w-10 h-10 bg-[#173847]/80 rounded border border-[#2a4e60] flex items-center justify-center hover:bg-[#1f4a5e] transition-colors">
+                  <button onClick={() => setShowUserDropdown(!showUserDropdown)} className="w-10 h-10 bg-[#334155]/80 rounded border border-[#2a4e60] flex items-center justify-center hover:bg-[#1f4a5e] transition-colors">
                     <User className="text-gray-300" size={20} />
                   </button>
                   {showUserDropdown && (
-                    <div className="absolute right-0 mt-2 w-48 bg-[#0F2B38] rounded-lg shadow-xl border border-[#2a4e60] overflow-hidden z-50">
-                      <button onClick={handleLogout} className="w-full px-4 py-3 text-left hover:bg-[#173847] flex items-center gap-2 text-gray-300 font-medium">
+                    <div className="absolute right-0 mt-2 w-48 bg-[#1e293b] rounded-lg shadow-xl border border-[#2a4e60] overflow-hidden z-50">
+                      <button onClick={handleLogout} className="w-full px-4 py-3 text-left hover:bg-[#334155] flex items-center gap-2 text-gray-300 font-medium">
                         <LogOut size={16} /> Logout
                       </button>
                     </div>
@@ -278,7 +278,7 @@ const DeepSeaApp = () => {
             {/* Tab Bar: Semi-transparent */}
             <div className="bg-[#0b1b22]/90 border-b border-[#1e4a5b]/50 flex gap-1 px-4 py-1 flex-shrink-0 overflow-x-auto">
               {tabs.map((tab) => (
-                <button key={tab.id} onClick={() => setActiveTabId(tab.id)} className={`px-4 py-2 rounded-t flex items-center gap-2 font-medium text-sm transition-colors whitespace-nowrap ${activeTabId === tab.id ? 'bg-[#0F2B38] text-white border-t-2 border-cyan-500' : 'bg-[#08161c]/60 text-gray-400 hover:text-gray-200 hover:bg-[#0c1f26]/80'}`}>
+                <button key={tab.id} onClick={() => setActiveTabId(tab.id)} className={`px-4 py-2 rounded-t flex items-center gap-2 font-medium text-sm transition-colors whitespace-nowrap ${activeTabId === tab.id ? 'bg-[#1e293b] text-white border-t-2 border-cyan-500' : 'bg-[#08161c]/60 text-gray-400 hover:text-gray-200 hover:bg-[#0c1f26]/80'}`}>
                   {tab.name}
                   <X size={14} onClick={(e) => handleCloseTab(tab.id, e)} className="hover:bg-red-500/20 hover:text-red-400 rounded-full p-0.5 transition-colors" />
                 </button>
@@ -288,8 +288,8 @@ const DeepSeaApp = () => {
             {activeTab && (
               <div className="flex-1 p-6 flex gap-6 overflow-auto">
                 {/* Left Sidebar (Tables) - Solid/High Opacity Panel */}
-                <div className="w-80 min-w-[320px] bg-[#0F2B38]/95 backdrop-blur-sm rounded-lg border border-[#1e4a5b] shadow-xl flex flex-col h-full">
-                  <h2 className="text-white font-bold text-lg mb-4 border-b border-[#1e4a5b] pb-2 p-5">Values and Tables</h2>
+                <div className="w-80 min-w-[320px] bg-[#1e293b]/95 backdrop-blur-sm rounded-lg border border-[#1e4a5b] shadow-xl flex flex-col h-full">
+                  <h2 className="text-white font-bold text-lg mb-4 border-b border-[#1e4a5b] pb-2 p-5">TABLES</h2>
                   <div className="flex-1 overflow-auto flex items-center justify-center p-4">
                     {activeTab.hasRun ? (
                       <img 
@@ -310,7 +310,7 @@ const DeepSeaApp = () => {
                 {/* Main Content Area */}
                 <div className="flex-1 flex flex-col gap-6 min-w-[600px]">
                   {/* Controls Box - Solid/High Opacity Panel */}
-                  <div className="bg-[#0F2B38]/95 backdrop-blur-sm rounded-lg border border-[#1e4a5b] shadow-xl p-5">
+                  <div className="bg-[#1e293b]/95 backdrop-blur-sm rounded-lg border border-[#1e4a5b] shadow-xl p-5">
                     <div className="flex flex-wrap gap-4 items-end">
                       {renderDropdowns(activeTab)}
                       
@@ -321,8 +321,8 @@ const DeepSeaApp = () => {
                   </div>
                   
                   {/* Graph Box - Solid/High Opacity Panel */}
-                  <div className="flex-1 bg-[#0F2B38]/95 backdrop-blur-sm rounded-lg border border-[#1e4a5b] shadow-xl p-5 flex flex-col min-h-[500px]">
-                    <h2 className="text-white font-bold text-lg mb-4 border-b border-[#1e4a5b] pb-2">Graph Output</h2>
+                  <div className="flex-1 bg-[#1e293b]/95 backdrop-blur-sm rounded-lg border border-[#1e4a5b] shadow-xl p-5 flex flex-col min-h-[500px]">
+                    <h2 className="text-white font-bold text-lg mb-4 border-b border-[#1e4a5b] pb-2">GRAPH OUTPUT</h2>
                     <div className="flex-1 min-h-0 bg-[#082029]/50 rounded border border-[#1e4a5b]/50 flex items-center justify-center overflow-hidden">
                       {activeTab.hasRun ? (
                         <img 
